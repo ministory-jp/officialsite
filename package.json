@@ -1,0 +1,21 @@
+{
+  "name": "@ministory/officialsite",
+  "version": "1.0.0",
+  "description": ":globe_with_meridians: officialsite of ministory.jp",
+  "author": "ministory <dev@ministory.jp>",
+  "license": "UNLICENSED",
+  "private": true,
+  "scripts": {
+    "checkdep": "depcheck",
+    "prepare": "husky install"
+  },
+  "devDependencies": {
+    "depcheck": "^1.4.3",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.2.0"
+  },
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ]
+}
