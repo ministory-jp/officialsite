@@ -1,0 +1,80 @@
+---
+import BaseHead from '../../components/BaseHead.astro';
+import Container from '../../components/Container.astro';
+import Footer from '../../components/Footer.astro';
+import Header from '../../components/Header.astro';
+import PageTitle from '../../components/PageTitle.astro';
+
+const law = [
+    {
+        key: '販売業者',
+        value: 'ミニストーリー',
+    },
+    {
+        key: '運営統括責任者',
+        value: '塩澤大輝',
+    },
+    {
+        key: '所在地',
+        value: '請求があった場合に遅滞なく開示します',
+    },
+    {
+        key: '電話番号',
+        value: '請求があった場合に遅滞なく開示します',
+    },
+    {
+        key: 'メールアドレス',
+        value: 'contact [at] ministory.jp（[at]を@に置き換えてください）',
+    },
+    {
+        key: '販売価格',
+        value: '寄付金のため，任意金額となります',
+    },
+    {
+        key: '追加手数料等の追加料金',
+        value: 'ありません',
+    },
+    {
+        key: '受付可能な決済手段',
+        value: 'クレジットカード，銀行振込',
+    },
+    {
+        key: '決済期間',
+        value: '申し込み完了時点で課金されます',
+    },
+    {
+        key: '引き渡し時期',
+        value: '寄付金のため，商品の引き渡しはありません',
+    },
+    {
+        key: '交換および返品',
+        value: '寄付金のため，返金やキャンセルは受け付けておりません',
+    },
+];
+---
+
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <BaseHead title={'特定商取引法に基づく表記'} description={'特定商取引法に基づく表記'} />
+    </head>
+    <body>
+        <Header />
+        <main>
+            <PageTitle>特定商取引法に基づく表記</PageTitle>
+            <Container>
+                <table class="m-8">
+                    {
+                        law.map((row) => (
+                            <tr>
+                                <th class="p-4 text-left">{row.key}</th>
+                                <td class="p-4 text-left">{row.value}</td>
+                            </tr>
+                        ))
+                    }
+                </table>
+            </Container>
+        </main>
+        <Footer />
+    </body>
+</html>
