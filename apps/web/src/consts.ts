@@ -12,3 +12,5 @@ export const SOCIAL_LINK = {
     instagram: 'https://instagram.com/ministory0909',
     facebook: 'https://www.facebook.com/ミニストーリー-109870978699769/',
 };
+
+export const CONTACT_FORM = 'https://airtable.com/shrSdxgmBb6jGvZRl';

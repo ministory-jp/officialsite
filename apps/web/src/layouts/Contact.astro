@@ -1,0 +1,21 @@
+---
+import Container from '../components/Container.astro';
+import SectionTitle from '../components/SectionTitle.astro';
+import { CONTACT_FORM } from '../consts';
+---
+
+<section id="contact" class="my-8">
+    <SectionTitle subtitle="contact">お問い合わせ</SectionTitle>
+    <Container>
+        <div class="text-center leading-loose">
+            <p>
+                ミニストーリーに関するお問い合わせは、下記フォームよりお願いいたします。
+                <br />
+                出張依頼・相談・共同制作など何でもご連絡ください。
+            </p>
+            <button class="m-8 rounded-full bg-primary-light p-4 text-white">
+                <a href={CONTACT_FORM} target="_blank">お問合せフォーム</a>
+            </button>
+        </div>
+    </Container>
+</section>
