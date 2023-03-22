@@ -14,3 +14,5 @@ export const SOCIAL_LINK = {
 };
 
 export const CONTACT_FORM = 'https://airtable.com/shrSdxgmBb6jGvZRl';
+
+export const SUPPORT_CHECKOUT = 'https://donate.stripe.com/test_9AQ3cJ2bb56Ng6I9AA';

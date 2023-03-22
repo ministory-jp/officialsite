@@ -1,0 +1,23 @@
+---
+import Container from '../components/Container.astro';
+import SectionTitle from '../components/SectionTitle.astro';
+import { SUPPORT_CHECKOUT } from '../consts';
+---
+
+<section id="support" class="my-8">
+    <SectionTitle subtitle="support">支援について</SectionTitle>
+    <Container>
+        <div class="text-center leading-loose">
+            <p>
+                ミニストーリーはボランティアによる活動で、かつ開催場所からの謝礼は原則受け取っていません。
+                <br />
+                しかし、音響機材の購入や運営・活動のために資金が必要です。
+                <br />
+                この活動にご理解いただき、経済的にサポートしてくださる方を募集しています。
+            </p>
+            <button class="m-8 rounded-full bg-primary-light p-4 text-white">
+                <a href={SUPPORT_CHECKOUT} target="_blank">この活動を支援する</a>
+            </button>
+        </div>
+    </Container>
+</section>
