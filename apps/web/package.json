@@ -7,7 +7,7 @@
     "scripts": {
         "lint": "eslint src && prettier --check src && astro check && tsc --noEmit",
         "lint:fix": "eslint --fix src && prettier --write src",
-        "dev": "astro dev",
+        "dev": "astro dev --host",
         "start": "astro dev",
         "build": "astro build",
         "preview": "astro preview",
