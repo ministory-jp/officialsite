@@ -1,13 +1,32 @@
 ---
-const today = new Date();
+import Container from './Container.astro';
+import { SOCIAL_LINK } from '../consts';
+
+const links = [
+    {
+        text: 'Instagram',
+        url: SOCIAL_LINK.instagram,
+        target: '_blank',
+    },
+    {
+        text: 'Facebook',
+        url: SOCIAL_LINK.facebook,
+        target: '_blank',
+    },
+];
 ---
 
-<footer>
-    &copy; {today.getFullYear()} YOUR NAME HERE. All rights reserved.
+<footer class="p-4 text-center">
+    <Container>
+        <section class="mb-2 flex justify-center divide-x divide-black">
+            {
+                links.map((link) => (
+                    <a class="px-2" href={link.url} target={link.target}>
+                        {link.text}
+                    </a>
+                ))
+            }
+        </section>
+        <p>&copy; 2023 ministory. All rights reserved.</p>
+    </Container>
 </footer>
-<style>
-    footer {
-        padding: 25px;
-        text-align: center;
-    }
-</style>
