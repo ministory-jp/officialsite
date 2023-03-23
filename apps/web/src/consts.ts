@@ -15,4 +15,4 @@ export const SOCIAL_LINK = {
 
 export const CONTACT_FORM = 'https://airtable.com/shrSdxgmBb6jGvZRl';
 
-export const SUPPORT_CHECKOUT = 'https://buy.stripe.com/5kA8wO2NkbNBcZG4gg';
+export const SUPPORT_CHECKOUT = 'https://donate.stripe.com/5kA8wO2NkbNBcZG4gg';
