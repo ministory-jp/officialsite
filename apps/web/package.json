@@ -17,7 +17,7 @@
     "license": "MIT",
     "dependencies": {
         "@astrojs/mdx": "^0.18.1",
-        "@astrojs/rss": "^2.1.1",
+        "@astrojs/rss": "^2.3.1",
         "@astrojs/sitemap": "^1.2.1",
         "@astrojs/tailwind": "^3.1.1",
         "@fontsource/noto-sans-jp": "^4.5.12",
@@ -31,7 +31,7 @@
         "eslint-plugin-jsx-a11y": "^6.7.1",
         "eslint-plugin-tailwindcss": "^3.10.1",
         "prettier-plugin-astro": "^0.8.0",
-        "prettier-plugin-tailwindcss": "^0.2.4"
+        "prettier-plugin-tailwindcss": "^0.2.5"
     },
     "prettier": "@ministory/prettier-config"
 }
