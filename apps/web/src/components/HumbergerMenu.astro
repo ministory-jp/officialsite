@@ -1,0 +1,78 @@
+---
+type MenuItem = {
+    text: string;
+    link: string;
+};
+
+const menu = [
+    // { text: 'お知らせ', link: '#news' },
+    { text: 'ミニ・ストーリーとは', link: '#who-we-are' },
+    { text: '取組内容', link: '#what-we-doing' },
+    { text: '活動報告', link: '#activity' },
+    // { text: '運営組織', link: '#' },
+    { text: '寄付について', link: '#support' },
+    { text: 'よくある質問', link: '#faq' },
+] satisfies MenuItem[];
+---
+
+<hamburger-menu data-menu="closed" class="group">
+    <section class="w-full overflow-auto">
+        <button
+            class="absolute top-0 right-0 z-40 flex h-12 w-12 items-center bg-primary px-1.5 group-data-[menu=open]:fixed"
+        >
+            <div
+                class="relative flex h-6 w-9 flex-col justify-between group-data-[menu=open]:left-1.5 group-data-[menu=open]:h-7"
+            >
+                <span
+                    class="block h-0.5 w-full origin-top-left rounded bg-white transition-transform duration-500 ease-in-out group-data-[menu=open]:rotate-45"
+                ></span>
+                <span class="block h-0.5 w-full bg-white transition-transform duration-200 group-data-[menu=open]:scale-y-0"
+                ></span>
+                <span
+                    class="block h-0.5 w-full origin-bottom-left bg-white transition-transform duration-500 ease-in-out group-data-[menu=open]:-rotate-45"
+                ></span>
+            </div>
+        </button>
+        <div
+            class="fixed z-10 flex w-full -translate-y-full flex-col divide-y divide-solid divide-gray-300 bg-white pt-20 transition-transform duration-500 ease-in-out group-data-[menu=open]:h-screen group-data-[menu=open]:translate-y-0"
+        >
+            <ul>
+                {
+                    menu.map((item) => (
+                        <li class="list-none p-4 text-lg">
+                            <a href={item.link}>{item.text}</a>
+                        </li>
+                    ))
+                }
+            </ul>
+        </div>
+    </section>
+</hamburger-menu>
+
+<script>
+    type MenuState = 'open' | 'closed';
+
+    class HamgurgerMenu extends HTMLElement {
+        constructor() {
+            super();
+
+            this.addEventListener('click', () => {
+                const state = this.dataset.menu as MenuState;
+                this.toggleState(state);
+            });
+        }
+
+        private toggleState(state: MenuState) {
+            switch (state) {
+                case 'open':
+                    this.dataset.menu = 'closed';
+                    break;
+                case 'closed':
+                    this.dataset.menu = 'open';
+                    break;
+            }
+        }
+    }
+
+    customElements.define('hamburger-menu', HamgurgerMenu);
+</script>
