@@ -29,7 +29,7 @@
         "@ministory/prettier-config": "^1.0.0",
         "eslint-plugin-astro": "^0.24.0",
         "eslint-plugin-jsx-a11y": "^6.7.1",
-        "eslint-plugin-tailwindcss": "^3.10.1",
+        "eslint-plugin-tailwindcss": "^3.11.0",
         "prettier-plugin-astro": "^0.8.0",
         "prettier-plugin-tailwindcss": "^0.2.6"
     },
