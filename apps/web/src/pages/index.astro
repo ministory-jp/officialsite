@@ -2,10 +2,13 @@
 import BaseHead from '../components/BaseHead.astro';
 import Footer from '../components/Footer.astro';
 import Top from '../layouts/Top.astro';
-import About from '../layouts/About.astro';
+import WhoWeAre from '../layouts/WhoWeAre.astro';
 import Contact from '../layouts/Contact.astro';
 import Support from '../layouts/Support.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+import WhatWeDoing from '../layouts/WhatWeDoing.astro';
+import Activity from '../layouts/Activity.astro';
+import Faq from '../layouts/Faq.astro';
 ---
 
 <!DOCTYPE html>
@@ -16,8 +19,11 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
     <body>
         <main>
             <Top />
-            <About />
+            <WhoWeAre />
+            <WhatWeDoing />
+            <Activity />
             <Support />
+            <Faq />
             <Contact />
         </main>
         <Footer />
