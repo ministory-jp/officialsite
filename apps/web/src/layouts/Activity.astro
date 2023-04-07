@@ -58,13 +58,17 @@ const activities = [
         <SectionTitle subtitle="activity">活動報告</SectionTitle>
         {
             activities.map((activity) => (
-                <div class="my-4 pb-8">
-                    <EyeCatch src={activity.eyecatch.src} alt={activity.eyecatch.alt} />
-                    <SectionTitle>{activity.title}</SectionTitle>
-                    <LeadTitle>{activity.lead}</LeadTitle>
-                    {activity.body.map((content) => (
-                        <Paragraph>{content}</Paragraph>
-                    ))}
+                <div class="my-4 pb-8 md:grid md:grid-cols-2 md:items-center md:gap-12">
+                    <div class="md:self-start md:pt-8">
+                        <EyeCatch src={activity.eyecatch.src} alt={activity.eyecatch.alt} />
+                    </div>
+                    <div>
+                        <SectionTitle>{activity.title}</SectionTitle>
+                        <LeadTitle>{activity.lead}</LeadTitle>
+                        {activity.body.map((content) => (
+                            <Paragraph>{content}</Paragraph>
+                        ))}
+                    </div>
                 </div>
                 // TODO: Install CTA Button
             ))
