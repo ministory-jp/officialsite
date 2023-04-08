@@ -1,37 +1,59 @@
 ---
 import Container from './Container.astro';
-import { SOCIAL_LINK } from '../consts';
 
 const links = [
     {
-        text: 'Instagram',
-        url: SOCIAL_LINK.instagram,
-        target: '_blank',
+        text: 'お問い合わせ',
+        url: '/#contact',
+        target: '_self',
     },
     {
-        text: 'Facebook',
-        url: SOCIAL_LINK.facebook,
-        target: '_blank',
+        text: '活動を支援する',
+        url: '/#support',
+        target: '_self',
     },
     {
         text: '特定商取引法に基づく表記',
         url: '/policies/law/',
-        blank: false,
+        target: '_self',
     },
 ];
 ---
 
-<footer class="p-4 text-center">
-    <Container>
-        <section class="mb-2 flex justify-center divide-x divide-black">
-            {
-                links.map((link) => (
-                    <a class="px-2" href={link.url} target={link.target}>
-                        {link.text}
-                    </a>
-                ))
-            }
-        </section>
-        <p>&copy; 2023 ministory. All rights reserved.</p>
-    </Container>
+<footer>
+    <div class="bg-primary-light py-12">
+        <Container>
+            <div class="flex flex-col content-center justify-center space-y-8 text-center">
+                <a href="/">
+                    <img class="mx-auto h-auto w-48" src="/images/logo.png" alt="logo" />
+                </a>
+                <div class="flex flex-col space-y-4 break-words text-3xl font-bold">
+                    <p>心動かされる瞬間を届ける</p>
+                    <p>仕える喜びを</p>
+                </div>
+                <div class="mx-auto">
+                    <ul class="grid w-fit grid-cols-2 gap-4 text-left">
+                        {
+                            links.map((link) => (
+                                <li class="list-inside list-disc text-primary-dark">
+                                    <a
+                                        class="text-lg font-bold text-black underline underline-offset-4"
+                                        href={link.url}
+                                        target={link.target}
+                                    >
+                                        {link.text}
+                                    </a>
+                                </li>
+                            ))
+                        }
+                    </ul>
+                </div>
+            </div>
+        </Container>
+    </div>
+    <div class="py-2 text-center font-medium">
+        <Container>
+            <p>&copy; 2023 Mini Story. All rights reserved.</p>
+        </Container>
+    </div>
 </footer>

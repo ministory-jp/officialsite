@@ -1,0 +1,23 @@
+---
+import Container from '../components/Container.astro';
+import EyeCatch from '../components/EyeCatch.astro';
+import Paragraph from '../components/Paragraph.astro';
+import SectionTitle from '../components/SectionTitle.astro';
+import LeadTitle from '../components/LeadTitle.astro';
+---
+
+<section id="what-we-doing" class="my-8">
+    <Container>
+        <SectionTitle subtitle="what we doing">取組内容</SectionTitle>
+        <div class="md:grid md:grid-cols-2 md:items-center md:gap-12">
+            <EyeCatch src="images/outbound-performance.png" alt="出張パフォーマンス" />
+            <div>
+                <LeadTitle>出張パフォーマンス</LeadTitle>
+                <Paragraph>
+                    それぞれのシーズンに合わせたパフォーマンスショーをお届けします。歌、ダンス、劇、楽器、パペットなど、内容は盛り沢山。ゲームやクイズといったアクティビティ要素を入れることも可能です。
+                </Paragraph>
+            </div>
+        </div>
+        <!-- TODO: Install CTA Button -->
+    </Container>
+</section>

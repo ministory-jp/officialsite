@@ -1,5 +1,8 @@
 ---
 import Container from '../components/Container.astro';
+import EyeCatch from '../components/EyeCatch.astro';
+import LeadTitle from '../components/LeadTitle.astro';
+import Paragraph from '../components/Paragraph.astro';
 import SectionTitle from '../components/SectionTitle.astro';
 import { SUPPORT_CHECKOUT } from '../consts';
 ---
@@ -7,17 +10,20 @@ import { SUPPORT_CHECKOUT } from '../consts';
 <section id="support" class="my-8">
     <SectionTitle subtitle="support">支援について</SectionTitle>
     <Container>
-        <div class="text-center leading-loose">
-            <p>
-                ミニ・ストーリーはボランティアによる活動で、かつ開催場所からの謝礼は原則受け取っていません。
-                <br />
-                しかし、音響機材の購入や運営・活動のために資金が必要です。
-                <br />
-                この活動にご理解いただき、経済的にサポートしてくださる方を募集しています。
-            </p>
-            <button class="m-8 rounded-full bg-primary-light p-4 text-white">
-                <a href={SUPPORT_CHECKOUT} target="_blank">この活動を支援する</a>
-            </button>
+        <div class="md:grid md:grid-cols-2 md:items-center md:gap-12">
+            <EyeCatch src="images/AdobeStock_383070119.jpeg" alt="子ども" />
+            <div>
+                <LeadTitle>寄付金の使い道</LeadTitle>
+                <Paragraph>
+                    機材や備品の購入・修繕、開催場所までの移動交通費など、活動運営費として活用させていただきます。
+                </Paragraph>
+                <Paragraph>尊い寄付を感謝致します。</Paragraph>
+                <div class="text-center md:text-right">
+                    <button class="m-8 rounded-full bg-primary-light p-4 text-white">
+                        <a href={SUPPORT_CHECKOUT} target="_blank">この活動を支援する</a>
+                    </button>
+                </div>
+            </div>
         </div>
     </Container>
 </section>
