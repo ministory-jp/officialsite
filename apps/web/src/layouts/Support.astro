@@ -4,7 +4,6 @@ import EyeCatch from '../components/EyeCatch.astro';
 import LeadTitle from '../components/LeadTitle.astro';
 import Paragraph from '../components/Paragraph.astro';
 import SectionTitle from '../components/SectionTitle.astro';
-import { SUPPORT_CHECKOUT } from '../consts';
 ---
 
 <section id="support" class="my-8">
@@ -20,7 +19,7 @@ import { SUPPORT_CHECKOUT } from '../consts';
                 <Paragraph>尊い寄付を感謝致します。</Paragraph>
                 <div class="text-center md:text-right">
                     <button class="m-8 rounded-full bg-primary-light p-4 text-white">
-                        <a href={SUPPORT_CHECKOUT} target="_blank">この活動を支援する</a>
+                        <a href="./support" target="_blank">この活動を支援する</a>
                     </button>
                 </div>
             </div>
