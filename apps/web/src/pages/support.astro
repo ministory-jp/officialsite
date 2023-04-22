@@ -1,0 +1,73 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Container from '../components/Container.astro';
+import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro';
+import PageTitle from '../components/PageTitle.astro';
+import Paragraph from '../components/Paragraph.astro';
+import SectionTitle from '../components/SectionTitle.astro';
+
+const bankInfo = [
+    {
+        key: '金融機関名',
+        value: 'みんなの銀行',
+    },
+    {
+        key: '金融機関コード',
+        value: '0043',
+    },
+    {
+        key: '支店名',
+        value: 'ゴールデンゲートブリッジ支店',
+    },
+    {
+        key: '店番',
+        value: '008',
+    },
+    {
+        key: '口座種別',
+        value: '普通',
+    },
+    {
+        key: '口座番号',
+        value: '4169540',
+    },
+    {
+        key: '講座名義',
+        value: 'シオザワダイキ',
+    },
+];
+---
+
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <BaseHead title={'ミニ・ストーリーを支援する'} description={'ミニ・ストーリーを支援する'} />
+    </head>
+    <body>
+        <Header />
+        <main>
+            <PageTitle>ミニ・ストーリーを支援する</PageTitle>
+            <Container>
+                <SectionTitle>銀行振込</SectionTitle>
+                <Paragraph>以下の振込先へ任意の金額をお振り込みください</Paragraph>
+                <Paragraph>
+                    また、お手数をおかけいたしますが、お振込後にministory0909@gmail.comまで
+                    <br />
+                    お名前とお振込いただいた金額をご一報いただけますと幸いです。
+                </Paragraph>
+                <table class="m-8">
+                    {
+                        bankInfo.map((item) => (
+                            <tr>
+                                <th class="p-4 text-left">{item.key}</th>
+                                <td class="p-4 text-left">{item.value}</td>
+                            </tr>
+                        ))
+                    }
+                </table>
+            </Container>
+        </main>
+        <Footer />
+    </body>
+</html>
