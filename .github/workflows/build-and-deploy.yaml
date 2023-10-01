@@ -16,6 +16,7 @@ run-name: |-
 jobs:
   update:
     timeout-minutes: 5
+    if: ${{ github.actor != 'dependabot[bot]' }}
     runs-on: ubuntu-latest
     environment:
       name: ${{ inputs.environment || 'preview' }}
