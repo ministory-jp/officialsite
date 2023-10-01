@@ -1,10 +1,8 @@
 ---
-name: check-web
+name: checks
 
 on:
-  pull_request:
-    paths:
-      - "apps/web/**"
+  pull_request: ~
   merge_group: ~
 
 jobs:
