@@ -1,0 +1,50 @@
+---
+name: build-and-deploy
+
+on:
+  pull_request: ~
+  workflow_dispatch:
+    inputs:
+      environment:
+        type: environment
+        required: true
+        description: Environment for deployment
+
+run-name: |-
+  ${{ github.event_name == 'workflow_dispatch' && 'Manual' || 'Automatic' }} build and deploy for ${{ inputs.environment || 'preview' }} environment
+
+jobs:
+  update:
+    timeout-minutes: 5
+    runs-on: ubuntu-latest
+    environment:
+      name: ${{ inputs.environment || 'preview' }}
+      url: ${{ steps.deploy.outputs.url }}
+    permissions:
+      contents: read
+      deployments: write
+    name: Publish to Cloudflare Pages
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - uses: oven-sh/setup-bun@v1
+
+      - name: Resolve Dependencies
+        run: bun install --frozen-lockfile
+        env:
+          HUSKY: 0
+
+      - name: Build
+        run: bun run --cwd apps/web build
+
+      - name: Publish to Cloudflare Pages
+        id: deploy
+        uses: cloudflare/pages-action@v1
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ vars.CLOUDFLARE_ACCOUNT_ID }}
+          projectName: ministory-jp
+          directory: apps/web/dist
+          # gitHubToken: ${{ secrets.GITHUB_TOKEN }}
+          wranglerVersion: '3'
