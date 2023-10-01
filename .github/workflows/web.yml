@@ -13,21 +13,17 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
-      - uses: actions/setup-node@v3
-        with:
-          node-version: "16"
+      - uses: oven-sh/setup-bun@v1
 
       - name: Resolve Dependencies
-        run: npm ci
+        run: bun install --frozen-lockfile
         env:
           HUSKY: 0
 
       - name: Check code
-        run: npm run lint --workspace apps/web
-
+        run: bun lint --cwd apps/web
       - name: Build
-        run: npm run build --workspace apps/web
+        run: bun build --cwd apps/web
