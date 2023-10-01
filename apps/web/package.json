@@ -16,7 +16,7 @@
     "author": "ministory <dev@ministory.jp>",
     "license": "MIT",
     "dependencies": {
-        "@astrojs/mdx": "^0.19.0",
+        "@astrojs/mdx": "^1.1.0",
         "@astrojs/rss": "^2.4.0",
         "@astrojs/sitemap": "^1.2.2",
         "@astrojs/tailwind": "^3.1.1",
