@@ -7,6 +7,6 @@
   "author": "ministory <dev@ministory.jp>",
   "license": "MIT",
   "dependencies": {
-    "prettier": "^2.8.8"
+    "prettier": "^3.0.3"
   }
 }

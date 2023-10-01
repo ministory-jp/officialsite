@@ -10,9 +10,9 @@
     "prepare": "husky install"
   },
   "devDependencies": {
-    "depcheck": "^1.4.3",
+    "depcheck": "^1.4.6",
     "husky": "^8.0.3",
-    "lint-staged": "^13.2.2"
+    "lint-staged": "^14.0.1"
   },
   "workspaces": [
     "packages/*",
