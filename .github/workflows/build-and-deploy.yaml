@@ -3,24 +3,16 @@ name: build-and-deploy
 
 on:
   pull_request: ~
-  workflow_dispatch:
-    inputs:
-      environment:
-        type: environment
-        required: true
-        description: Environment for deployment
+  workflow_dispatch: ~
 
 run-name: |-
-  ${{ github.event_name == 'workflow_dispatch' && 'Manual' || 'Automatic' }} build and deploy for ${{ inputs.environment || 'preview' }} environment
+  ${{ github.event_name == 'workflow_dispatch' && 'Manual' || 'Automatic' }} build and deploy for ${{ github.ref == 'refs/heads/main' && 'Production' || 'Preview' }} environment
 
 jobs:
   update:
     timeout-minutes: 5
     if: ${{ github.actor != 'dependabot[bot]' }}
     runs-on: ubuntu-latest
-    environment:
-      name: ${{ inputs.environment || 'preview' }}
-      url: ${{ steps.deploy.outputs.url }}
     permissions:
       contents: read
       deployments: write
