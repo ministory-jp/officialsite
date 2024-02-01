@@ -12,7 +12,7 @@
   "devDependencies": {
     "depcheck": "^1.4.6",
     "husky": "^8.0.3",
-    "lint-staged": "^14.0.1"
+    "lint-staged": "^15.2.1"
   },
   "workspaces": [
     "packages/*",
