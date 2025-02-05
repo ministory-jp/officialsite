@@ -1,14 +1,14 @@
 @import 'tailwindcss';
 
 @theme {
-    --font-sans: "Noto Sans JP", "sans";
+    --font-sans: 'Noto Sans JP', 'sans';
     --font-weight-thin: 100;
     --font-weight-light: 300;
     --font-weight-normal: 400;
     --font-weight-medium: 500;
     --font-weight-bold: 700;
     --font-weight-extrabold: 900;
-    --color-primary: #FFA509;
-    --color-primary-light: #FFCA6F;
-    --color-primary-dark: #E56923;
+    --color-primary: #ffa509;
+    --color-primary-light: #ffca6f;
+    --color-primary-dark: #e56923;
 }

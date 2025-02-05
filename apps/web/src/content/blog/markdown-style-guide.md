@@ -80,19 +80,19 @@ The blockquote element represents content that is quoted from another source, op
 
 #### Unordered List
 
--   List item
--   Another item
--   And another item
+- List item
+- Another item
+- And another item
 
 #### Nested list
 
--   Fruit
-    -   Apple
-    -   Orange
-    -   Banana
--   Dairy
-    -   Milk
-    -   Cheese
+- Fruit
+    - Apple
+    - Orange
+    - Banana
+- Dairy
+    - Milk
+    - Cheese
 
 ## Other Elements — abbr, sub, sup, kbd, mark
 
