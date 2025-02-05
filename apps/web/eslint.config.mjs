@@ -13,14 +13,14 @@ export default [
         },
     },
     {
-        ignores: ['**/env.d.ts'],
+        ignores: ['.astro/**'],
         rules: {
             'no-unused-vars': 'warn',
             'no-undef': 'warn',
         },
         settings: {
             tailwindcss: {
-                config: 'tailwind.config.cjs',
+                stylesheet: './src/styles/global.css',
             },
         },
     },

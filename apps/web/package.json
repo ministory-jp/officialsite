@@ -1,39 +1,39 @@
 {
-  "name": "@ministory/web",
-  "version": "1.0.0",
-  "type": "module",
-  "description": "Web front",
-  "main": "index.js",
-  "scripts": {
-    "lint": "eslint src && prettier --check src && astro check && tsc --noEmit",
-    "lint:fix": "eslint --fix src && prettier --write src",
-    "dev": "astro dev --host",
-    "start": "astro dev",
-    "build": "astro build",
-    "preview": "astro preview",
-    "astro": "astro"
-  },
-  "author": "ministory <dev@ministory.jp>",
-  "license": "MIT",
-  "dependencies": {
-    "@astrojs/mdx": "^4.0.8",
-    "@astrojs/rss": "^4.0.11",
-    "@astrojs/sitemap": "^3.2.1",
-    "@fontsource/noto-sans-jp": "^5.0.17",
-    "@tailwindcss/vite": "^4.0.3",
-    "astro": "^5.2.5",
-    "tailwindcss": "^4.0.3"
-  },
-  "devDependencies": {
-    "@astrojs/check": "^0.9.4",
-    "@ministory/eslint-config": "workspace:*",
-    "@ministory/prettier-config": "workspace:*",
-    "eslint-plugin-astro": "^1.2.3",
-    "eslint-plugin-jsx-a11y": "^6.9.0",
-    "eslint-plugin-tailwindcss": "^3.17.4",
-    "prettier-plugin-astro": "^0.14.0",
-    "prettier-plugin-tailwindcss": "^0.6.5",
-    "typescript": "^5.3.3"
-  },
-  "prettier": "@ministory/prettier-config"
+    "name": "@ministory/web",
+    "version": "1.0.0",
+    "type": "module",
+    "description": "Web front",
+    "main": "index.js",
+    "scripts": {
+        "lint": "eslint . && prettier --config .prettierrc.mjs --check . && astro check && tsc --noEmit",
+        "lint:fix": "eslint --fix . && prettier --config .prettierrc.mjs --write .",
+        "dev": "astro dev --host",
+        "start": "astro dev",
+        "build": "astro build",
+        "preview": "astro preview",
+        "astro": "astro"
+    },
+    "author": "ministory <dev@ministory.jp>",
+    "license": "MIT",
+    "dependencies": {
+        "@astrojs/mdx": "^4.0.8",
+        "@astrojs/rss": "^4.0.11",
+        "@astrojs/sitemap": "^3.2.1",
+        "@fontsource/noto-sans-jp": "^5.0.17",
+        "@tailwindcss/vite": "^4.0.3",
+        "astro": "^5.2.5",
+        "tailwindcss": "^4.0.3"
+    },
+    "devDependencies": {
+        "@astrojs/check": "^0.9.4",
+        "@ministory/eslint-config": "workspace:*",
+        "@ministory/prettier-config": "workspace:*",
+        "eslint-plugin-astro": "^1.2.3",
+        "eslint-plugin-jsx-a11y": "^6.9.0",
+        "eslint-plugin-tailwindcss": "^3.18.0",
+        "prettier-plugin-astro": "^0.14.0",
+        "prettier-plugin-tailwindcss": "^0.6.11",
+        "typescript": "^5.3.3"
+    },
+    "prettier": "@ministory/prettier-config"
 }
