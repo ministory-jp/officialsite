@@ -48,7 +48,7 @@
       "name": "@ministory/prettier-config",
       "version": "1.0.0",
       "dependencies": {
-        "prettier": "latest",
+        "prettier": "^3.4.2",
       },
     },
   },
