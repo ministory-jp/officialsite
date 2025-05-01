@@ -19,7 +19,7 @@
         "@astrojs/mdx": "^4.0.8",
         "@astrojs/rss": "^4.0.11",
         "@astrojs/sitemap": "^3.2.1",
-        "@fontsource/noto-sans-jp": "^5.0.17",
+        "@fontsource/noto-sans-jp": "^5.2.5",
         "@tailwindcss/vite": "^4.0.3",
         "astro": "^5.2.5",
         "tailwindcss": "^4.0.3"
