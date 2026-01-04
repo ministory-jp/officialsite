@@ -30,8 +30,6 @@ jobs:
 
       - name: Resolve Dependencies
         run: pnpm install --frozen-lockfile
-        env:
-          HUSKY: 0
 
       - name: Build
         run: pnpm --filter=web run build

@@ -20,8 +20,6 @@ jobs:
 
       - name: Resolve Dependencies
         run: pnpm install --frozen-lockfile
-        env:
-          HUSKY: 0
 
       - name: Check code
         run: pnpm --filter=web run lint
@@ -40,8 +38,6 @@ jobs:
 
       - name: Resolve Dependencies
         run: pnpm install --frozen-lockfile
-        env:
-          HUSKY: 0
 
       - name: Build
         run: pnpm --filter=web run build

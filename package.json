@@ -6,13 +6,10 @@
   "license": "UNLICENSED",
   "private": true,
   "scripts": {
-    "checkdep": "depcheck",
-    "prepare": "husky install"
+    "checkdep": "depcheck"
   },
   "devDependencies": {
-    "depcheck": "^1.4.7",
-    "husky": "^9.0.10",
-    "lint-staged": "^15.2.2"
+    "depcheck": "^1.4.7"
   },
   "packageManager": "pnpm@10.27.0"
 }
