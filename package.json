@@ -7,15 +7,12 @@
   "private": true,
   "scripts": {
     "checkdep": "depcheck",
-    "prepare": "husky install"
+    "check": "biome check && pnpm -r check",
+    "fix": "biome check --fix --unsafe && pnpm -r fix"
   },
   "devDependencies": {
-    "depcheck": "^1.4.7",
-    "husky": "^9.0.10",
-    "lint-staged": "^15.2.2"
+    "@biomejs/biome": "^2.3.11",
+    "depcheck": "^1.4.7"
   },
-  "workspaces": [
-    "packages/*",
-    "apps/*"
-  ]
+  "packageManager": "pnpm@10.27.0"
 }

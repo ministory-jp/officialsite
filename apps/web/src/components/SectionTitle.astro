@@ -1,10 +1,11 @@
 ---
 interface Props {
-    subtitle?: string;
+	subtitle?: string;
 }
 
-import Container from './Container.astro';
-const { subtitle = '' } = Astro.props;
+import Container from "./Container.astro";
+
+const { subtitle = "" } = Astro.props;
 ---
 
 <div class="m-4 text-center">
