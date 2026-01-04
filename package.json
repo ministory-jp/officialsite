@@ -6,9 +6,12 @@
   "license": "UNLICENSED",
   "private": true,
   "scripts": {
-    "checkdep": "depcheck"
+    "checkdep": "depcheck",
+    "check": "biome check && pnpm -r check",
+    "fix": "biome check --fix --unsafe && pnpm -r fix"
   },
   "devDependencies": {
+    "@biomejs/biome": "^2.3.11",
     "depcheck": "^1.4.7"
   },
   "packageManager": "pnpm@10.27.0"
