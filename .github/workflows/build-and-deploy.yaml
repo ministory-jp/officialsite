@@ -21,15 +21,20 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v6
 
-      - uses: oven-sh/setup-bun@v2
+      - uses: pnpm/action-setup@v4
+
+      - uses: actions/setup-node@v6
+        with:
+          node-version-file: .node-version
+          cache: 'pnpm'
 
       - name: Resolve Dependencies
-        run: bun install --frozen-lockfile
+        run: pnpm install --frozen-lockfile
         env:
           HUSKY: 0
 
       - name: Build
-        run: bun --cwd=apps/web run build
+        run: pnpm --filter=web run build
 
       - name: Publish to Cloudflare Pages
         id: deploy
