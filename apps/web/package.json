@@ -1,9 +1,10 @@
 {
   "name": "@ministory/web",
-  "version": "1.0.0",
-  "type": "module",
   "description": "Web front",
-  "main": "index.js",
+  "author": "ministory <dev@ministory.jp>",
+  "license": "MIT",
+  "type": "module",
+  "version": "1.0.0",
   "scripts": {
     "check": "astro check && tsc --noEmit",
     "dev": "astro dev --host",
@@ -12,8 +13,6 @@
     "preview": "astro preview",
     "astro": "astro"
   },
-  "author": "ministory <dev@ministory.jp>",
-  "license": "MIT",
   "dependencies": {
     "@astrojs/mdx": "^4.0.8",
     "@astrojs/rss": "^4.0.11",
